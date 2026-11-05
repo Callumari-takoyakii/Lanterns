@@ -1,0 +1,17 @@
+{
+    "type": "palladium:render_layer",
+    "render_layer": "lanterns:suits/red",
+    "disable_rendering": false,
+    "slot": "trinkets:hand/ring",
+    "max_stack_size": 1,
+    "rarity": "epic",
+    "is_fire_resistant": true,
+    "tooltip": [
+        "Description",
+        {
+            "translate": "lanterns.desc.red_ring_desc",
+            "color": "#D32020",
+            "underlined": false
+        }
+    ]
+}

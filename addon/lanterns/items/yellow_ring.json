@@ -1,0 +1,17 @@
+{
+    "type": "palladium:render_layer",
+    "render_layer": "lanterns:suits/yellow",
+    "disable_rendering": false,
+    "slot": "trinkets:hand/ring",
+    "max_stack_size": 1,
+    "rarity": "epic",
+    "is_fire_resistant": true,
+    "tooltip": [
+        "Description",
+        {
+            "translate": "lanterns.desc.yellow_ring_desc",
+            "color": "#D3BB23",
+            "underlined": false
+        }
+    ]
+}

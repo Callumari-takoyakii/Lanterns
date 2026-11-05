@@ -1,0 +1,65 @@
+{
+    "name": "Orange Lantern Corps: Avarice",
+    "persistent_data": true,
+    "background": "minecraft:textures/block/white_wool.png",
+    "icon": "lanterns:textures/icons/gui/powers/symbols/orange.png",
+    "gui_display_type": "tree",
+    "abilities": {
+        "suit": {
+            "type": "palladium:render_layer",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "render_layer": "lanterns:suits/orange",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "flight": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "attribute": "palladium:flight_speed",
+            "amount": 1,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-0201-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "regeneration": {
+            "type": "palladium:healing",
+            "icon": "minecraft:apple",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "frequency": 30,
+            "amount": 1,
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        }
+
+    }
+}

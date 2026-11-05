@@ -1,0 +1,777 @@
+{
+    "name": "Green Lantern Corps: Willpower",
+    "persistent_data": true,
+    "background": "minecraft:textures/block/white_wool.png",
+    "icon": "lanterns:textures/icons/gui/powers/symbols/green.png",
+    "gui_display_type": "tree",
+    "abilities": {
+        "suit": {
+            "type": "palladium:render_layer",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "render_layer": "lanterns:suits/green",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "flight": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "attribute": "palladium:flight_speed",
+            "amount": 1,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-0101-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "regeneration": {
+            "type": "palladium:healing",
+            "icon": "minecraft:apple",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "frequency": 60,
+            "amount": 1,
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "shield": {
+            "type": "palladium:aim",
+            "icon": "minecraft:blaze_rod",
+            "title": "Construct: Shield",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "Toggle on to create a bubble construct around you that protects you from damage.",
+            "time": 4,
+            "arm": "right_arm",
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:toggle",
+                                            "cooldown": 0,
+                                            "key_type": "key_bind",
+                                            "needs_empty_hand": false,
+                                            "allow_scrolling_when_crouching": true
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "shield_forcefield": {
+            "type": "gravecore:forcefield",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "sound": "minecraft:item.shield.block",
+            "max_health": 200,
+            "scoreboard": "null",
+            "regen_rate": 40,
+            "damage_sources": [
+                "minecraft:is_lightning",
+                "minecraft:is_fall"
+            ],
+            "thorns": false,
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_enabled",
+                                            "power": "lanterns:green",
+                                            "ability": "shield"
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "shield_bubble": {
+            "type": "palladium:render_layer",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "render_layer": "lanterns:green/bubble",
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_enabled",
+                                            "power": "lanterns:green",
+                                            "ability": "shield"
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "swords": {
+            "type": "palladium:dummy",
+            "icon": "minecraft:blaze_rod",
+            "title": "Construct: Swords",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "Create three swords that cut down things in front of you one after the other. The final hit briefly stuns the target.",
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:activation",
+                                            "cooldown": 0,
+                                            "ticks": 12,
+                                            "key_type": "key_bind",
+                                            "needs_empty_hand": false,
+                                            "allow_scrolling_when_crouching": true
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "sword_1": {
+            "type": "gravecore:aoe_damage",
+            "icon": "minecraft:fire_charge",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "radius": 6,
+            "damage": 4,
+            "fire_ticks": 0,
+            "damage_type": "null",
+            "cone": true,
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_ticks",
+                                            "power": "lanterns:green",
+                                            "ability": "swords",
+                                            "min": 4,
+                                            "max": 4
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "sword_2": {
+            "type": "gravecore:aoe_damage",
+            "icon": "minecraft:fire_charge",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "radius": 6,
+            "damage": 6,
+            "fire_ticks": 0,
+            "damage_type": "null",
+            "cone": true,
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_ticks",
+                                            "power": "lanterns:green",
+                                            "ability": "swords",
+                                            "min": 8,
+                                            "max": 8
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "sword_3": {
+            "type": "gravecore:aoe_damage",
+            "icon": "minecraft:fire_charge",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "radius": 6,
+            "damage": 8,
+            "fire_ticks": 0,
+            "damage_type": "null",
+            "cone": true,
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_ticks",
+                                            "power": "lanterns:green",
+                                            "ability": "swords",
+                                            "min": 12,
+                                            "max": 12
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "sword_final_tick": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "/tag @s add greenswordslash"
+            ],
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_ticks",
+                                            "power": "lanterns:green",
+                                            "ability": "swords",
+                                            "min": 12,
+                                            "max": 12
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "sword_tag_remove": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "/tag @s remove greenswordslash"
+            ],
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:interval",
+                                            "active_ticks": 0,
+                                            "disabled_ticks": 35
+                                        }
+                ],
+                "unlocking": [
+                                        {
+                                            "type": "palladium:has_tag",
+                                            "tag": "greenswordslash"
+                                        }
+                ]
+            }
+        },
+        "minigun": {
+            "type": "palladium:dummy",
+            "icon": "minecraft:blaze_rod",
+            "title": "Construct: Minigun",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 2,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "Hold to create a minigun that sprays construct bullets.",
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:held",
+                                            "cooldown": 0,
+                                            "key_type": "key_bind",
+                                            "needs_empty_hand": false
+                                        }
+                ],
+                "unlocking": [
+                                        {
+                                            "type": "palladium:not",
+                                            "conditions": [
+                                                {
+                                                    "type": "palladium:has_tag",
+                                                    "tag": "greenswordslash"
+                                                }
+                                            ]
+                                        }
+                ]
+            }
+        },
+        "minigun_bullets": {
+            "type": "palladium:projectile",
+            "icon": "minecraft:snowball",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "entity_type": "palladium:custom_projectile",
+            "entity_data": "null",
+            "inaccuracy": 0,
+            "velocity": 2.5,
+            "swinging_arm": "none",
+            "damage_from_player": false,
+            "ignore_player_movement": false,
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_enabled",
+                                            "power": "lanterns:green",
+                                            "ability": "minigun"
+                                        },
+                                        {
+                                            "type": "palladium:interval",
+                                            "active_ticks": 0,
+                                            "disabled_ticks": 5
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "sword_throw": {
+            "type": "palladium:dummy",
+            "icon": "minecraft:blaze_rod",
+            "title": "Variant / Construct: Swords",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 2,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "Use Ability 3 after Ability 2 to hurl sword constructs at targets. Slows hit targets.",
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:activation",
+                                            "cooldown": 0,
+                                            "ticks": 6,
+                                            "key_type": "key_bind",
+                                            "needs_empty_hand": false,
+                                            "allow_scrolling_when_crouching": true
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "sword_throw_1": {
+            "type": "palladium:projectile",
+            "icon": "minecraft:snowball",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "entity_type": "palladium:custom_projectile",
+            "entity_data": "null",
+            "inaccuracy": 0,
+            "velocity": 1.2,
+            "swinging_arm": "none",
+            "damage_from_player": false,
+            "ignore_player_movement": false,
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_ticks",
+                                            "power": "lanterns:green",
+                                            "ability": "sword_throw",
+                                            "min": 2,
+                                            "max": 2
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "sword_throw_2": {
+            "type": "palladium:projectile",
+            "icon": "minecraft:snowball",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "entity_type": "palladium:custom_projectile",
+            "entity_data": "null",
+            "inaccuracy": 0,
+            "velocity": 1.4,
+            "swinging_arm": "none",
+            "damage_from_player": false,
+            "ignore_player_movement": false,
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_ticks",
+                                            "power": "lanterns:green",
+                                            "ability": "sword_throw",
+                                            "min": 4,
+                                            "max": 4
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "sword_throw_3": {
+            "type": "palladium:projectile",
+            "icon": "minecraft:snowball",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "entity_type": "palladium:custom_projectile",
+            "entity_data": "null",
+            "inaccuracy": 0,
+            "velocity": 1.6,
+            "swinging_arm": "none",
+            "damage_from_player": false,
+            "ignore_player_movement": false,
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_ticks",
+                                            "power": "lanterns:green",
+                                            "ability": "sword_throw",
+                                            "min": 6,
+                                            "max": 6
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "sword_throw_final_commands": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "/tag @s remove greenswordslash"
+            ],
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_ticks",
+                                            "power": "lanterns:green",
+                                            "ability": "sword_throw",
+                                            "min": 6,
+                                            "max": 6
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "fist": {
+            "type": "palladium:aim",
+            "icon": "minecraft:blaze_rod",
+            "title": "Construct: Fist",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 3,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "Create a fist construct and use it to grab and restrain opponents for a little while.",
+            "time": 8,
+            "arm": "right_arm",
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:held",
+                                            "cooldown": 0,
+                                            "key_type": "key_bind",
+                                            "needs_empty_hand": false
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "fist_grab": {
+            "type": "palladium:energy_beam",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "energy_beam": "lanterns:green",
+            "damage_type": "null",
+            "damage": 0,
+            "max_distance": 22,
+            "speed": 0.9,
+            "set_on_fire_seconds": 0,
+            "cause_fire": false,
+            "smelt_blocks": false,
+            "commands_on_block_hit": [],
+            "commands_on_entity_hit": [],
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_enabled",
+                                            "power": "lanterns:green",
+                                            "ability": "fist"
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "fist_commands": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "/tag @s add greenfistaccel"
+            ],
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_enabled",
+                                            "power": "lanterns:green",
+                                            "ability": "fist"
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "fist_tag_remove": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "/tag @s remove greenfistaccel"
+            ],
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:interval",
+                                            "active_ticks": 0,
+                                            "disabled_ticks": 35
+                                        }
+                ],
+                "unlocking": [
+                                        {
+                                            "type": "palladium:and",
+                                            "conditions": [
+                                        {
+                                            "type": "palladium:not",
+                                            "conditions": [
+                                                {
+                                                    "type": "palladium:ability_enabled",
+                                                    "power": "lanterns:green",
+                                                    "ability": "fist"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "palladium:has_tag",
+                                            "tag": "greenfistaccel"
+                                        }
+                                    ]
+                                }
+                ]
+            }
+        },
+        "accelerator_rings": {
+            "type": "palladium:dummy",
+            "icon": "minecraft:blaze_rod",
+            "title": "Construct: Accelerator Rings",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 4,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "Create green rings beneath your feet, propelling you forwards.",
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:activation",
+                                            "cooldown": 0,
+                                            "ticks": 6,
+                                            "key_type": "key_bind",
+                                            "needs_empty_hand": false,
+                                            "allow_scrolling_when_crouching": true
+                                        }
+                ],
+                "unlocking": [
+                                        {
+                                            "type": "palladium:not",
+                                            "conditions": [
+                                                {
+                                                    "type": "palladium:has_tag",
+                                                    "tag": "greenfistaccel"
+                                                }
+                                            ]
+                                        }
+                ]
+            }
+        },
+        "accel_ring": {
+            "type": "gravecore:movement",
+            "icon": "minecraft:fire_charge",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "motion_scale": 0.4,
+            "direction": "facing",
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_last_tick",
+                                            "power": "lanterns:green",
+                                            "ability": "accelerator_rings"
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "fist_accel": {
+            "type": "palladium:dummy",
+            "icon": "minecraft:blaze_rod",
+            "title": "Variant / Construct: Accelerator Rings",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 4,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:activation",
+                                            "cooldown": 0,
+                                            "ticks": 6,
+                                            "key_type": "key_bind",
+                                            "needs_empty_hand": false,
+                                            "allow_scrolling_when_crouching": true
+                                        }
+                ],
+                "unlocking": [
+                                        {
+                                            "type": "palladium:has_tag",
+                                            "tag": "greenfistaccel"
+                                        }
+                ]
+            }
+        },
+        "fist_accel_boost": {
+            "type": "gravecore:movement",
+            "icon": "minecraft:fire_charge",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "gui_frame_type": "task",
+            "description": "null",
+            "motion_scale": 0.8,
+            "direction": "facing",
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_last_tick",
+                                            "power": "lanterns:green",
+                                            "ability": "fist_accel"
+                                        }
+                ],
+                "unlocking": []
+            }
+        }
+
+
+    }
+}

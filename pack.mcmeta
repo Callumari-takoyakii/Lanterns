@@ -1,0 +1,13 @@
+{
+    "pack": {
+        "id": "lanterns",
+        "pack_format": 15,
+        "description": "lantern",
+        "version": "1.0.0"
+    },
+    "dependencies": {
+        "common": {},
+        "fabric": {},
+        "forge": {}
+    }
+}

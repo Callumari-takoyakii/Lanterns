@@ -1,0 +1,21 @@
+modLoader="lowcodefml"
+showAsResourcePack = false
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="lanterns"
+version="1.0.0"
+logoFile = "logo.png"
+logoBlur = false
+displayName="Lanterns"
+description='''
+lantern
+'''
+
+[[dependencies.lanterns]]
+modId = "palladium"
+mandatory = true
+versionRange = "[4.4.1,)"
+ordering = "NONE"
+side = "BOTH"

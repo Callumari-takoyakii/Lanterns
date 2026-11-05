@@ -1,0 +1,13 @@
+{
+    "schemaVersion": 1,
+    "authors": [
+        "Callumari"
+    ],
+    "environment": "*",
+    "id": "lanterns",
+    "version": "1.0.0",
+    "name": "Lanterns",
+    "description": "lantern",
+    "icon": "logo.png",
+    "license": "All rights reserved"
+}

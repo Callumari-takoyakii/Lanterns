@@ -1,0 +1,13 @@
+{
+    "icon": "lanterns:green_ring",
+    "title": "Lantern Rings",
+    "items": [
+        "lanterns:green_ring",
+        "lanterns:orange_ring",
+        "lanterns:red_ring",
+        "lanterns:yellow_ring",
+        "lanterns:blue_ring",
+        "lanterns:white_ring",
+        "lanterns:black_ring"
+    ]
+}

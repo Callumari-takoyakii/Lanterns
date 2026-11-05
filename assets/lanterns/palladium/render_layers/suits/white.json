@@ -1,0 +1,10 @@
+{
+  "textures": {
+    "normal": "lanterns:textures/models/suits/white_wide.png",
+    "slim": "lanterns:textures/models/suits/white_wide.png"
+  },
+  "model_layers": {
+    "normal": "palladium:humanoid#suit",
+    "slim": "palladium:humanoid#suit_slim"
+  }
+}

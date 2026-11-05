@@ -1,0 +1,15 @@
+{
+    "type": "palladium:default",
+    "slot": "trinkets:hand/ring",
+    "max_stack_size": 1,
+    "rarity": "epic",
+    "is_fire_resistant": true,
+    "tooltip": [
+        "Description",
+        {
+            "translate": "lanterns.desc.black_ring_desc",
+            "color": "#7D7D7D",
+            "underlined": false
+        }
+    ]
+}
